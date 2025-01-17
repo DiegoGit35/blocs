@@ -6,11 +6,11 @@ class MyCustomElevatedButton extends StatelessWidget {
   final VoidCallback onPressed;
 
   const MyCustomElevatedButton({
-    Key? key,
+    super.key,
     required this.text,
     required this.icon,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

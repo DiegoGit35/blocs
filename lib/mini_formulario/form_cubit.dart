@@ -7,6 +7,8 @@ class FormCubit extends Cubit<String> {
   void changeString(String value) {
     if (value.isNotEmpty) {
       emit(value);
+    } else {
+      emit('');
     }
   }
 }

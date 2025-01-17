@@ -27,7 +27,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) {
           return BlocProvider(
             child: const FormPage(),
-            create: (_) => FormCubit("initialState"),
+            create: (_) => FormCubit(""),
           );
         });
       default:

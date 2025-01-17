@@ -1,5 +1,6 @@
 import 'package:blocs/mini_formulario/form_cubit.dart';
 import 'package:blocs/widgets/generic_appbar.dart';
+import 'package:blocs/widgets/my_text_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,17 +24,11 @@ class _FormPageState extends State<FormPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TextFormField(
-                  decoration: InputDecoration(
-                    hintText: "Escriba algo...",
-                    border: OutlineInputBorder(
-                      borderSide: const BorderSide(width: 1.0),
-                    ),
-                  ),
-                  onChanged: (value) {
-                    context.read<FormCubit>().changeString(value);
-                  },
-                ),
+                MyTextForm(
+                    callback: (value) {
+                      context.read<FormCubit>().changeString(value);
+                    },
+                    hintText: 'Escribe algo...')
               ],
             ),
           ),
